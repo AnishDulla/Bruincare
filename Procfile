@@ -1,1 +1,1 @@
-web: gunicorn Bruincare:app
+web: gunicorn bruincare:app
