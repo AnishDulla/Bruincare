@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Bruincare </title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='ucla.png') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="headerbar_container">
+        <a href="/" class="site-name">
+            <img src="{{ url_for('static', filename='CAPS_Logo.png') }}" height="70" width="780" alt="UCLA Counseling and Psychological Center">
+        </a>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+        <img src="{{ url_for('static', filename='CAPS_Cover.png') }}" alt="CAPS Cover Image">
+        <h1 class="custom-font"><center>CAPS Consultation Triage Screening</center></h1>
+        <p class="type-text-font">All registered UCLA students are eligible for same-day clinical consultation and help with referrals, linkage, treatment recommendations, and coordination of mental health care and support regardless of insurance plan or current residence. Due to state law and California Board of Psychology and Board of Behavioral Sciences restrictions, students who are not currently in California are, and are out of the state or country, are eligible only for clinical coordination and referral to a provider in their local area based on student insurance plans.</p>
+
+        <div id="loader" class="loader" style="display: none;"></div>
+
+        <div class="chat-history-container">
+            {{ chat_history_html_formatted|safe }}
+        </div>
+
+
+
+        <form method="POST" onsubmit="document.getElementById('loader').style.display='block';">
+            <div class="textarea-container">
+
+                <textarea id="text_input" name="text_input" rows="5" cols="50" placeholder="Please share your thoughts and feelings regarding your emotional well-being or any concerns you may have. This will help us better understand your mental health needs as we prepare for a consultation."></textarea>
+                <button type="submit" name="button_text" value="submit" class="icon-button">
+                    <img src="{{ url_for('static', filename='send_icon.png') }}" alt="Send" />
+                </button>
+            </div>
+            <input type="hidden" name="full_name" value="{{ full_name }}">
+            <input type="hidden" name="email" value="{{ email }}">
+            <input type="hidden" name="bruin_id" value="{{ bruin_id }}">
+            <input type="hidden" name="insurance_plan" value="{{ insurance_plan }}">
+            <input type="hidden" id="history" name="history" value="{{ chat_history }}">
+        </form>
+
+        <br>
+
+        <form method="POST" action="/finish">
+            <input type="hidden" name="full_name" value="{{ full_name }}">
+            <input type="hidden" name="email" value="{{ email }}">
+            <input type="hidden" name="bruin_id" value="{{ bruin_id }}">
+            <input type="hidden" name="insurance_plan" value="{{ insurance_plan }}">
+            <input type="hidden" id="history" name="history" value="{{ chat_history }}">
+            <center><button type="submit" name="button_text" value="finish" class="submit-button">Finished! I've shared my concerns with Bruincare, and I'm ready for a consultation.</button></center>
+        </form>
+
+        <br>
+
+        <div class="blue-outline-box">
+            <p class="custom-font2"><strong>IF THIS IS A LIFE THREATENING EMERGENCY, CALL 9-1-1 OR GO TO YOUR NEAREST HOSPITAL EMERGENCY ROOM.</strong></p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p class="footer-font"><center>2023 CAPS Bruincare (ML Triage System) -- Anish Dulla. All rights reserved.</center></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+/* styles.css */
+
+:root {
+    --text-color: #FFFFFF;
+    --icon-color: #ACACBE;
+    --icon-hover-bg: #5b5e71;
+    --placeholder-color: #cccccc;
+    --outgoing-chat-bg: #343541;
+    --incoming-chat-bg: #444654;
+    --outgoing-chat-border: #343541;
+    --incoming-chat-border: #444654;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.headerbar_container {
+    background-color: #2774AE; /* UCLA blue color for the top section */
+    color: #fff; /* Text color for the top section */
+    padding: 20px;
+}
+
+.banner {
+    padding: 20px;
+}
+
+.login {
+    background-color: #daebfe; /* Light yellow creme color for the bottom section */
+    color: #fff4e3; /* Text color for the bottom section */
+    padding: 50px;
+}
+
+.custom-font {
+    font-family: Proxima Nova;
+    font-size: 50px;
+    font-weight: 575;
+    line-height: 20px;
+    color: #333;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.custom-font2 {
+    font-family: Proxima Nova;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.footer {
+    background-color: #2774AE; /* UCLA blue color for the top section */
+    color: #fff; /* Text color for the top section */
+    padding: 5px;
+    font-family: Proxima Nova;
+}
+
+.is-invalid-label {
+    display = block; /* UCLA blue color for the top section */
+    margin = 0; /* Text color for the top section */
+    color = #555;
+}
+
+.user-info {
+    box-sizing: border-box;
+    width: 35%;
+    height: 2.375rem;
+    margin = 10px;
+    margin-right: 40px;
+    /* margin: 0 0 1rem; */
+    padding: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    font-family: Proxima Nova;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    transition: box-shadow 0.1s,border-color .3s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.main {
+    background-color: #daebfe;
+}
+
+main > .container {
+    background-color: #fff;
+    /* padding-top: 1.5rem; */
+    padding-bottom: 2rem;
+    z-index: 100;
+}
+
+.container {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1023px;
+}
+
+.submit-button {
+  width: 800px; /* Set the width of the box as needed */
+  height: 35px; /* Set the height of the box as needed */
+  background-color: #2774ae;
+  font-family: Proxima Nova;
+  color: #fff;
+  text-align: center; /* Center text horizontally within the box */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  line-height: 100px;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.blue-outline-box {
+    border: 4px solid #2774AE; /* Blue outline */
+    padding: 0px;
+    text-align: center;
+    color: #000; /* Text color */
+}
+
+.container img {
+    max-width: 100%; /* Make the image fit the container's width */
+    max-height: 100%; /* Make the image fit the container's height */
+    display: block;
+}
+
+.type-text-font {
+    font-family: Proxima Nova;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 20px;
+    color: #333;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.box {
+    margin: 10px;
+    margin-right: 1px;
+}
+
+.custom-font3 {
+    font-family: Proxima Nova;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.custom-font3::placeholder {
+    font-style: italic;
+}
+
+.scroll-box {
+    height: 120px;
+    width: 1200px;
+    overflow: auto;
+}
+
+.chat-container .chat {
+    color: #2774AE;
+}
+
+.chat .chat-details {
+    display: flex;
+    align-items: center;
+}
+
+.chat .chat-details img {
+    width: 35px;
+    heightL 35px;
+    object-fit: cover;
+    border-radius: 2px;
+
+}
+
+.typing-container {
+    position = fixed;
+    bottom = 0;
+    width = 100%;
+    display: flex;
+    padding: 20px 10px;
+    justify-content: center;
+    background = var(--outgoing-chat-bg)
+    border = 1px solid var(--incoming-chat-border)
+}
+
+.typing-container .typing-content {
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.typing-content .typing-textarea {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.typing-textarea textarea {
+    width: 100%
+    height: 55px;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    padding: 15px 45px 15px 20px;
+    color: var(--text-color);
+    background: var(--incoming-chat-bg);
+    outline: 1px solid var(--incoming-chat-border);
+}
+
+.chat-history-container {
+  max-height: 400px; /* Adjust the height as needed */
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 0 auto;
+  overflow-y: auto; /* Enables vertical scrolling */
+  /* padding: 10px; /* Optional, for padding inside the container */
+  border: 1px solid #ccc; /* Optional, adds a border around the container */
+  margin-bottom: 20px; /* Optional, adds space below the container */
+  background-color: #f9f9f9; /* Optional, sets a background color */
+
+}
+
+.user-message {
+  border-bottom: 3px solid #ddd; /* Adds a light line below each user message */
+  padding-top: 10px; /* Optional, adds space below the text */
+  padding-bottom: 10px; /* Optional, adds space below the text */
+  /* margin-bottom: 10px; /* Optional, adds space below the line */
+  background-color: #FFD100;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bruincare-message {
+  border-bottom: 3px solid #ddd; /* Adds a light line below each user message */
+  padding-top: 10px; /* Optional, adds space below the text */
+  padding-bottom: 10px; /* Optional, adds space below the text */
+  /* margin-bottom: 10px; /* Optional, adds space below the line */
+  background-color: #8bb8e8;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.textarea-container {
+    position: relative;
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+textarea {
+    resize: none;
+    padding: 15px;
+    padding-bottom: 40px; /* extra padding to not overlap the icon */
+    border-radius: 4px;
+    width: 100%;
+}
+
+.icon-button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon-button img {
+    width: 30px; /* or your desired size */
+    height: auto;
+}
+
+.blue-outline-box {
+    width: 800px;
+    border: 4px solid #2774AE; /* Blue outline */
+    padding: 0px;
+    text-align: center;
+    color: #000; /* Text color */
+    margin: 0 auto;
+}
+
+.custom-font2 {
+    font-family: Proxima Nova;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: fixed; /* Use fixed for positioning relative to the viewport */
+    top: 60%; /* Adjust this to position the loader */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

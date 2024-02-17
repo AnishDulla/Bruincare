@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Bruincare </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='ucla.png') }}">
+    <!-- Include any necessary stylesheets or scripts -->
+</head>
+
+<body>
+
+<header class = "header">
+    <div class = "headerbar_container">
+        <a href = "/" class = "site-name">
+            <!-- <img src = "{{ url_for('static', filename = 'CAPS_Logo.png') }}" height = "70", width = "780" alt = "UCLA Counseling and Psychological Center"> -->
+            <img src = "{{ url_for('static', filename = 'CAPS_Logo.png') }}" height = "70", width = "780" alt = "UCLA Counseling and Psychological Center">
+        </a>
+    </div>
+</header>
+
+<main class = "main">
+    <main class = "container">
+        <img src="{{ url_for('static', filename = 'CAPS_Cover.png') }}" alt="Description of the image">
+        <!-- <header class = "banner"> -->
+            <h1 class = "custom-font"> <center> Consultation Preparation Notes </center>  </h1>
+
+    <div class="user-details">
+        <p><strong>Name:</strong> {{ full_name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Bruin ID:</strong> {{ bruin_id }}</p>
+        <p><strong>Insurance Plan:</strong> {{ insurance_plan }}</p>
+    </div>
+
+    <div class="chat-summary">
+    <h2 >Chat Summary</h2>
+    {{ summarized_history|safe }}
+    </div>
+
+    <div class="severity-score">
+    <h2> Severity Score </h2>
+    {{ severity_score|safe }}
+    </div>
+
+     <div class="chat-history">
+      <h2> Full Initial Screening Chat History </h2>
+        {{ chat_history|safe }}
+    </div>
+
+    </main>
+
+    <!-- THE BOTTOM FOOTER SECTION -->
+<footer class = "footer">
+    <p class = "footer-font"> <center> 2023 CAPS Bruincare (ML Triage System) -- Anish Dulla. All rights reserved. </center> </p>
+</footer>
+
+</body>
+</html>
+
