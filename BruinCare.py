@@ -1,7 +1,12 @@
 from flask import Flask, request, render_template
 import openai
+from dotenv import load_dotenv
+import os
 
-openai.api_key = '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'
+env_path = os.path.expanduser('~/Desktop/Bruincare/venv/.env')
+load_dotenv(env_path)
+
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 name = 'Bruincare'
 role = 'a dedicated assistant aimed to help User with their mental health crisis and needs. do not recommend going to therapy / seeing counselor as that is what the patient is doing next anyways.'
