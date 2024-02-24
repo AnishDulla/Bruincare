@@ -334,3 +334,31 @@ textarea {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.navbar {
+  border-top: 3.5px solid #FFD100;
+  background-color: #2774ae; /* UCLA Blue */
+  padding: 10px 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}

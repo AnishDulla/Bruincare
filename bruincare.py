@@ -102,5 +102,13 @@ def finish():
     # You can process or format chat_history as needed
     return render_template('finish_page.html', chat_history=chat_history, full_name = full_name, email = email, bruin_id = bruin_id, insurance_plan = insurance_plan, summarized_history = summarized_history, severity_score = severity_score)
 
+@app.route('/overview')
+def overview():
+    return render_template('overview.html')
+
+@app.route('/demo')
+def demo():
+    return render_template('demo.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port = 5029)

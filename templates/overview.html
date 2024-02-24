@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bruincare - Overview</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='ucla.png') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="headerbar_container">
+        <a href="/" class="site-name">
+            <img src="{{ url_for('static', filename='CAPS_Logo.png') }}" height="70" width="780" alt="UCLA Counseling and Psychological Center">
+        </a>
+    </div>
+</header>
+
+<!-- Navigation bar -->
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="/">Interface</a></li>
+    <li><a href="/overview">Overview</a></li>
+    <li><a href="/demo">Demo</a></li>
+  </ul>
+</nav>
+
+<main class="main">
+    <div class="container">
+        <img src="{{ url_for('static', filename='CAPS_Cover.png') }}" alt="Cover Image for Bruincare">
+        <h1 class="custom-font"><center> Overview </center></h1>
+
+        <div class="overview-section">
+            <h2>What is Bruincare?</h2>
+            <p>Bruincare is a mental health care assistant trained to help students with immediate mental health crisis and help prepare CAPS for an effective consultation with patients. This application uses the latest generative AI and OpenAI technologies to assess and gauge a student's mental health on-demand and increase access to mental health services. Bruincare is designed to assist, not replace, CAPS providers with consultation, triage, and scheduling.</p>
+            <p>Bruincare uses AI technology to prompt the user to understand their mental health situation while also offering resource guidance and coping mechanisms based on the user's situation. This allows for the user to deeply explain their emotions while also recieving 24/7 immediate support. After users are done sharing their concerns with Bruincare and are ready for a consultation, Bruincare provides mental health counselors with consultation preparation notes for their meeting. This includes a summary of the situation the user described, a severity score for triage support, as well as the full chat history.</p>
+        </div>
+
+        <div class="overview-section">
+            <h2>Why Bruincare?</h2>
+            <p>For students, Bruincare uniquely provides 24/7 access to resource guidance and immediate help while ensuring their anonymity and privacy. Often times, the mental health battle is silent. Many students are not willing to talk to friends or family about their struggles, let alone a counselor. Furthermore, many students often forego mental health care because of long wait times and triage queries at the wrong hours of the day. By providing a forum for students to recieve 24/7 access to immediate support and resource guidance while still remaining anonymous, Bruincare increases access to care. </p>
+            <p>For counselors, Bruincare provides critical information for initial screenings, triage support, and reduces wait times between patients. Mental health providers often go into screening meetings without a crystal clear sense of the patient's background and condition. As Bruincare prompts patients for their entire situation, providers are given a detailed summary of what each patient is going through as well as full chat history. Also, often times understanding how severe a patient's situation is has real implications of the priority of care they should recieve. As Bruincare provides triage support with severity score ratings based on what the user describes, it ensures the students who need urgent care recieve it with first priority. </p>
+        </div>
+
+        <div class="overview-section">
+            <h2>FAQ</h2>
+            <p class = 'user-message'>
+                <span style = 'font-style: italic;'> Is my information and conversation with Bruincare secure and confidential? </span> <br> <br>
+                Information and messages shared with Bruincare are solely between the user and the provider. The platform uses end-to-end encryption to protect users' conversations from prying eyes. This means that only the sender and the recipient can see the messages that are sent between them. The platform does not share user data with third parties, and it does not collect any unnecessary information from users. Even OpenAI cannot access the messages.
+            </p>
+
+            <p class = 'bruincare-message'>
+                <span style = 'font-style: italic;'> Is AI technology safe in conversing respectfully and appropriately with students? </span> <br> <br>
+                The technology we use (OpenAI’s API) has inherently many built-in community guidelines and response checks to ensure community-safe responses. There are many checks and balances built into the system that avoids racist, sexist, etc. remarks. Being said, we cannot expect that Bruincare will return inappropriate or insensitive responses when giving the user advice or counseling on serious mental health situations.
+            </p>
+
+            <p class = 'user-message'>
+                <span style = 'font-style: italic;'> Does Bruincare and other AI technologies seek to replace conventional counseling? </span> <br> <br>
+                No! We understand that nothing can compete with conventional person-to-person counseling and therapy. However, while not designed to replace conventional counseling, Bruincare and AI applications are designed to assist mental health counseling. Bruincare is an additional tool in the toolbelt that should be used to alleviate the mental health crisis on campus.
+            </p>
+
+             <p class = 'bruincare-message'>
+                <span style = 'font-style: italic;'> Can Bruincare handle emergencies? </span> <br> <br>
+                While Bruincare can provide immediate support and guidance, it is not equipped to handle emergencies. Users in crisis are advised to contact the emergency service number shown on each page (310-825-0768) or a mental health professional directly.
+            </p>
+
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p class="footer-font"><center>2024 Bruincare for CAPS (AI Mental Health Assistant) -- Anish Dulla. All rights reserved.</center></p>
+</footer>
+
+</body>
+</html>

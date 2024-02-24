@@ -9,6 +9,7 @@
 
 <body>
 
+
 <header class = "header">
     <div class = "headerbar_container">
         <a href = "/" class = "site-name">
@@ -17,17 +18,20 @@
     </div>
 </header>
 
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="/">Interface</a></li>
+    <li><a href="/overview">Overview</a></li>
+    <li><a href="/demo">Demo</a></li>
+  </ul>
+</nav>
+
 <main class = "main">
     <div class = "container">
         <img src="{{ url_for('static', filename = 'CAPS_Cover.png') }}" alt="Description of the image">
         <!-- <header class = "banner"> -->
             <h1 class = "custom-font"> <center> Bruincare </center>  </h1>
-    <p class= "type-text-font"> All registered UCLA student are eligible for same-day clinical consultation and help with referrals,
-        linkage, treatment recommendations, and coordination of mental health care and support regardless
-        of insurance plan or current residence. Due to state law and California Board of Psychology and
-        Board of Behavioral Sciences restrictions, students who are not currently in CAPS are, and are
-        out of the state or country, are eligible only for clinical coordination and referral to a provider
-        in their local area based on student insurance plans. </p>
+    <p class= "type-text-font"> Bruincare is an experimental AI-based product designed to assist CAPS in the consultation and triage process. To begin, share your concerns and/or changes in emotional well-being to prompt conversation with Bruincare. Continue conversation until you have expressed yourself and sufficiently answered prompted questions. Personal information and conversations with Bruincare are kept secure and confidential between only the user and provider. </p>
 
         <form method="POST">
         <div class = "row">

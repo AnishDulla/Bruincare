@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bruincare - Overview</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='ucla.png') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="headerbar_container">
+        <a href="/" class="site-name">
+            <img src="{{ url_for('static', filename='CAPS_Logo.png') }}" height="70" width="780" alt="UCLA Counseling and Psychological Center">
+        </a>
+    </div>
+</header>
+
+<!-- Navigation bar -->
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="/">Interface</a></li>
+    <li><a href="/overview">Overview</a></li>
+    <li><a href="/demo">Demo</a></li>
+  </ul>
+</nav>
+
+<main class="main">
+    <div class="container">
+        <img src="{{ url_for('static', filename='CAPS_Cover.png') }}" alt="Cover Image for Bruincare">
+        <h1 class="custom-font"><center> Demo </center></h1>
+
+        <div class="overview-section">
+            <h2>Step 1: Enter Information</h2>
+            <p> In our demo, we will take a student, John Doe. John Doe has been facing a mental health crisis due to intense internship stress which has led to mild self-harm.   </p>
+            <p> The first step is to enter our information, then begin to describe the situation. After that, click the send button in the bottom right hand corner to continue.  </p>
+
+            <div style="text-align: center;">
+                <img src="{{ url_for('static', filename='demo_stage1.png') }}" alt="Demo Stage 1" style="margin: auto; width: 600px;">
+            </div>
+
+        </div>
+
+        <div class="overview-section">
+            <h2>Step 2: Engage with Bruincare</h2>
+            <p> The next step is to continue the conversation with Bruincare. Respond to questions it may prompt you to understand more about your situation and respond to possible feedback and coping mechanisms provided by Bruincare. </p>
+            <p> Once you feel that you have shared all your concerns with Bruincare, you are ready for a consultation! Click the blue box at the bottom of the page to continue.  </p>
+
+            <div style="text-align: center;">
+                <img src="{{ url_for('static', filename='demo_stage2.png') }}" alt="Demo Stage 2" style="margin: auto; width: 600px;">
+            </div>
+        </div>
+
+        <div class="overview-section">
+            <h2>Step 3: Receive Consultation Preparation Notes</h2>
+            <p> Moving on, we receive our consultation preparation notes. It gives us a chat summary of John's interaction with Bruincare as well as a severity score (3). </p>
+            <p> At the end of the page, click the button at the bottom to arrive at the Bruincare Research Survey.  </p>
+
+            <div style="text-align: center;">
+                <img src="{{ url_for('static', filename='demo_stage3.png') }}" alt="Demo Stage 3" style="margin: auto; width: 600px;">
+            </div>
+        </div>
+
+         <div class="overview-section">
+            <h2>Step 4: Fill Out the Survey! </h2>
+             <p> The Bruincare Research Survey is designed to give us a better understanding of students' reactions to our product. It allows us to make beneficial changes in future iterations and better understand the role of AI in the mental health space. </p>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <p class="footer-font"><center>2024 Bruincare for CAPS (AI Mental Health Assistant) -- Anish Dulla. All rights reserved.</center></p>
+</footer>
+
+</body>
+</html>
