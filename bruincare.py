@@ -9,9 +9,18 @@ load_dotenv(env_path)
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 name = 'Bruincare'
-role = 'a dedicated assistant aimed to help User with their mental health crisis and needs. do not recommend going to therapy / seeing counselor as that is what the patient is doing next anyways.'
+role = 'a dedicated assistant aimed to help User with their mental health crisis and needs. do not recommend going to therapy or seeing a counselor as that is what the patient is doing next anyways.'
 
 impersonated_role = "From now on you are going to act as {}".format(role)
+
+websites_info = [
+        "https://www.mentalhealth.gov - For comprehensive mental health information.",
+        "https://counseling.ucla.edu/what-is-new/treatment-services-at-caps - Contact information and appointment scheduling at CAPS.",
+        "https://counseling.ucla.edu/services/our-services - Resources at CAPS."
+    ]
+
+# Join the websites into a single string with newline characters for readability
+websites_str = "\n".join(websites_info)
 
 app = Flask(__name__)
 
@@ -22,7 +31,7 @@ def chatcompletion(user_input, impersonated_role, chat_history):
     presence_penalty=0,
     frequency_penalty=0,
     messages=[
-      {"role": "system", "content": f"{impersonated_role}. Conversation history: {chat_history}"},
+      {"role": "system", "content": f"{impersonated_role}. Additionally, for more specific questions, consider consulting the following resources:\n{websites_str}\n\n Conversation history: {chat_history}"},
       {"role": "user", "content": user_input}
     ]
   )
