@@ -362,3 +362,51 @@ textarea {
 .nav-links a:hover {
   text-decoration: underline;
 }
+
+/* Responsive adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+
+    .headerbar_container, .banner, .login, .footer, .submit-button, .blue-outline-box, .chat-history-container, .textarea-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .submit-button, .chat-history-container, .blue-outline-box, .textarea-container {
+        width: 100%; /* Adjust width to be 100% for mobile devices */
+    }
+
+    .scroll-box, .typing-container .typing-content {
+        width: 100%; /* Adjust scroll box and typing container width */
+    }
+
+    .custom-font {
+        font-size: 24px; /* Reduce font size for mobile devices */
+    }
+
+    .custom-font2, .custom-font3, .type-text-font {
+        font-size: 14px; /* Adjust font size for readability on smaller screens */
+    }
+
+    .container {
+        padding-right: 10px; /* Reduce container padding */
+        padding-left: 10px; /* Reduce container padding */
+    }
+
+    .row {
+        flex-direction: column; /* Stack elements vertically in smaller screens */
+    }
+
+    .icon-button img {
+        width: 25px; /* Adjust icon size for smaller screens */
+    }
+
+    .navbar, .nav-links li {
+        display: block; /* Stack navbar items vertically */
+        text-align: center; /* Center align nav links */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px; /* Add space between nav items */
+    }
+
+}
