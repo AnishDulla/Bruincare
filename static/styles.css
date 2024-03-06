@@ -363,50 +363,103 @@ textarea {
   text-decoration: underline;
 }
 
-/* Responsive adjustments for screens smaller than 768px */
+/* Original styles.css content */
+/* ... */
+/* All of your existing CSS styles go here */
+/* ... */
+
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-
-    .headerbar_container, .banner, .login, .footer, .submit-button, .blue-outline-box, .chat-history-container, .textarea-container {
-        padding-left: 10px;
-        padding-right: 10px;
+    /* Reduce header, banner, and footer padding */
+    .headerbar_container, .banner, .footer {
+        padding: 10px;
     }
 
-    .submit-button, .chat-history-container, .blue-outline-box, .textarea-container {
-        width: 100%; /* Adjust width to be 100% for mobile devices */
+    /* Make the header logo responsive */
+    .header img {
+        max-width: 100%;
+        height: auto;
     }
 
-    .scroll-box, .typing-container .typing-content {
-        width: 100%; /* Adjust scroll box and typing container width */
+    /* Center the content in the header bar container */
+    .headerbar_container {
+        text-align: center;
+    }
+
+    /* Ensure images within the container fit the screen */
+    .container img {
+        max-height: 200px; /* Adjust this as needed for your design */
+        object-fit: contain;
+    }
+
+    /* Adjust the padding and margin of user info input fields */
+    .user-info {
+        margin: 5px;
+        height: auto; /* Let the height be determined by the content/padding */
+        padding: 10px;
+    }
+
+    /* Adjust the textarea-container for the mobile screen */
+    .textarea-container {
+        margin: 0 5px; /* Adjust side margins if necessary */
+    }
+
+    /* Adjust submit button for mobile */
+    .submit-button {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Add some margin on top and bottom */
+    }
+
+    /* Adjust emergency banner for mobile */
+    .blue-outline-box {
+        padding: 10px;
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Center footer content and adjust padding */
+    .footer {
+        text-align: center;
+        padding: 10px 5px;
+    }
+
+    /* Stack the navigation links vertically */
+    .navbar, .nav-links li {
+        display: block;
+        text-align: center;
+        margin: 0; /* Remove any margin that could cause horizontal scrolling */
+    }
+
+    /* Make sure nav links fit on mobile screens */
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 5px; /* Add padding for easier touch */
+    }
+
+    /* Center main content and adjust font sizes */
+    .main {
+        text-align: center;
     }
 
     .custom-font {
-        font-size: 24px; /* Reduce font size for mobile devices */
+        font-size: 20px; /* Smaller font size for mobile */
     }
 
     .custom-font2, .custom-font3, .type-text-font {
         font-size: 14px; /* Adjust font size for readability on smaller screens */
     }
 
-    .container {
-        padding-right: 10px; /* Reduce container padding */
-        padding-left: 10px; /* Reduce container padding */
+    /* Make adjustments to padding and margins for containers and rows */
+    .container, .row {
+        padding: 10px 5px;
+        margin: 0 auto;
     }
 
-    .row {
-        flex-direction: column; /* Stack elements vertically in smaller screens */
+    /* Adjust the look of the chat history container */
+    .chat-history-container {
+        padding: 5px;
+        font-size: 14px; /* Adjust text size for chat history */
     }
-
-    .icon-button img {
-        width: 25px; /* Adjust icon size for smaller screens */
-    }
-
-    .navbar, .nav-links li {
-        display: block; /* Stack navbar items vertically */
-        text-align: center; /* Center align nav links */
-    }
-
-    .nav-links li {
-        margin-bottom: 10px; /* Add space between nav items */
-    }
-
 }
+
+/* Add any additional mobile-specific styles below as needed */
+
