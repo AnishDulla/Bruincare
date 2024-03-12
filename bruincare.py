@@ -78,25 +78,27 @@ def get_first_name(full_name):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-  if request.method == 'POST':
-    full_name = request.form.get('full_name')
-    first_name = get_first_name(full_name)
-    bruin_id = request.form.get('bruin_id')
-    email = request.form.get('email')
-    insurance_plan = request.form.get('insurance_plan')
+    if request.method == 'POST':
+        # Use `or 'Anonymous'` to set default value if user input is None or empty
+        full_name = request.form.get('full_name') or 'Anonymous'
+        first_name = get_first_name(full_name)  # Assuming this function handles 'Anonymous' appropriately
+        bruin_id = request.form.get('bruin_id') or 'Anonymous'
+        email = request.form.get('email') or 'Anonymous'
+        insurance_plan = request.form.get('insurance_plan') or 'Anonymous'
 
-    text_input = request.form.get('text_input')
-    chat_history = request.form.get('history')
+        text_input = request.form.get('text_input')
+        chat_history = request.form.get('history')
 
-    chatgpt_output = chatcompletion(text_input, impersonated_role, chat_history).replace(f'{role}:', '')
-    chat_history += f'<div class="user-message"> {first_name}: {text_input}</div>'
-    chat_history += f'<div class="bruincare-message"> {name}: {chatgpt_output}</div>'
-    chat_history_html_formatted = chat_history.replace('\n', '<br>')
+        # Assuming chatcompletion is defined elsewhere and works with the provided inputs
+        chatgpt_output = chatcompletion(text_input, impersonated_role, chat_history).replace(f'{role}:', '')
+        chat_history += f'<div class="user-message"> {first_name}: {text_input}</div>'
+        chat_history += f'<div class="bruincare-message"> {name}: {chatgpt_output}</div>'
+        chat_history_html_formatted = chat_history.replace('\n', '<br>')
 
-    return render_template('submit_form.html', chat_history_html_formatted=chat_history_html_formatted,
-                           chat_history=chat_history, full_name=full_name, bruin_id = bruin_id, email = email, insurance_plan = insurance_plan)
+        return render_template('submit_form.html', chat_history_html_formatted=chat_history_html_formatted,
+                               chat_history=chat_history, full_name=full_name, bruin_id=bruin_id, email=email, insurance_plan=insurance_plan)
 
-  return render_template('home_page.html')
+    return render_template('home_page.html')
 
 @app.route('/finish', methods=['POST'])
 def finish():
